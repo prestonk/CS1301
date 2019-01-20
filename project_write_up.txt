@@ -1,0 +1,4 @@
+1) Our movie is about a mouse (our robot) that is roaming the halls of a house and happens to stumble upon a room that has a cat. The mouse (robot) at first doesn’t notice the cat, but then backtracks to the door and sees the cat facing him. The camera switches to the point of view of the cat looking at the mouse (robot). Then, the mouse enters the cat’s room and starts terrorizing the cat. 
+Essentially we wanted to recreate a “Tom and Jerry” scenario. We used the “fade to black” effect for the opening credits. We took the opening credit for “Tom and Jerry” and put it into the code for it to fade to black. Then, when the camera was acting from the point of view of the cat, the camera was in a sepia mode. Also, we had a function that has the scene where the mouse is tormenting the cat be sped up, so we had a tempo change special effect as well. We also used cross fade and fade in between scenes. 
+
+2) No deviations were made. 

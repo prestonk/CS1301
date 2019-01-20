@@ -1,0 +1,283 @@
+
+
+<!---
+ 
+  My Name is:  Preston Knibbe 
+  My GT ID is: 903074340
+  My Email address is: pknibbe3@gatech.edu
+  My Collaboration Statement is: I worked on the homework assignment alone, using only this semester's course materials and w3schools.com
+
+-->
+<!--Template written by Ikenna Omekam -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<link rel="StyleSheet" href="style.css" type="text/css" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>CS 1301 JavaScript Lab </title>
+	</head>
+	<body>
+			<div align="center">
+				<h1> JavaScript Lab </h1>
+				<p> This lab will contain the functions from <b>a past homework</b>, implemented in JavaScript</p>
+				<p> For reference: <a href="http://www.cc.gatech.edu/classes/AY2014/cs1301_spring/hw/cs1301-hw03-loops-conditionals.pdf"> The past Homework 3</a></p>
+			</div>
+			
+			<div id ="function0">
+				<h2> letterGrade </h2>
+				<dl>
+					<dt><b>Parameters</b></dt>
+						<dd>grade - an integer/float representing the numerical grade</dd>
+					<dt><b>Return</b></dt>
+						<dd>a String - ‘You made a(n) [letter grade].’</dd>
+					<dt><b>Description</b></dt>
+						<dd>
+							Write a function, using conditionals, that determines the letter grade from the numerical grade, passed in as 
+							a parameter. The letter grade is determined by the following: [90, 100] - A, [80, 90) - B, [70, 80) - C, [60, 
+							70) - D, [0, 60) - F (Assume the numerical grade argument is between 0 && 100.) After converting the 
+							numerical grade to a letter grader, return the exact string, ‘You made a(n) [letter grade].’<br/>
+						</dd>
+				<dl>
+
+				grade:&nbsp;&nbsp;<input type="text" id="grade_num"/>
+				<br/>
+				<input type="button" value="Run Function" onClick="onClickFunc0()" />
+				<script>
+					function onClickFunc0()
+					{
+						var grade = document.getElementById('grade_num').value;
+						letterGrade(grade);
+					}
+				</script>
+			</div>
+			
+			<div id ="function1">
+				<h2> countLetter</h2>
+				<dl>
+					<dt><b>Parameters</b></dt>
+						<dd>aWord – a string representing a word</dd>
+						<dd>aLetter – a string representing the character to count in aWord</dd>
+					<dt><b>Return</b></dt>
+						<dd>count – integer representing the number of times aLetter appears in aWord</dd>
+					<dt><b>Description</b></dt>
+						<dd>
+							Write a function that takes in a word && letter as parameters. The function will then count the 
+							number of times that the letter appears in the word, using a loop. Remember that capital letters are 
+							DIFFERENT from lower case letters! Return the number of times that the letter appears in the word or 
+							sentence as an integer
+						</dd>
+				<dl>
+				aWord:&nbsp;&nbsp;<input type="text" id="word"/>
+				aLetter:&nbsp;&nbsp;<input type="text" id="letter"/>
+				<br/>
+				<input type="button" value="Run Function" onClick="onClickFunc1()" />
+				<script>
+					function onClickFunc1()
+					{
+						var aWord = document.getElementById('word').value;
+						var aLetter = document.getElementById('letter').value;
+						
+						countLetter(aWord,aLetter);
+					}
+				</script>
+			</div>
+			
+			<div id ="function2">
+				<h2> eyeForI </h2>
+				<dl>
+					<dt><b>Parameters</b></dt>
+						<dd>aString – any string</dd>
+					<dt><b>Return</b></dt>
+						<dd>The modified string</dd>
+					<dt><b>Description</b></dt>
+						<dd>
+							Write a function that takes in a string as a parameter. Replace every “I” && “i” in the string with 
+							“eye” && return the resulting string. The function MUST use a for-loop or while loop to build up the 
+							new string while processing the original string letter by letter
+						</dd>
+				<dl>
+				aString:&nbsp;&nbsp;<input type="text" id="string"/>
+				<br/>
+				<input type="button" value="Run Function" onClick="onClickFunc2()" />
+				<script>
+					function onClickFunc2()
+					{
+						var aString = document.getElementById('string').value;
+						
+						eyeForI(aString);
+					}
+				</script>
+			</div>
+			
+			<div id ="function3">
+				<h2> wordMirror </h2>
+				<dl>
+					<dt><b>Parameters</b></dt>
+						<dd>aString – any string</dd>
+					<dt><b>Return</b></dt>
+						<dd>The mirrored string (reversed)</dd>
+					<dt><b>Description</b></dt>
+						<dd>
+							Write a function that takes in a string as its only parameter. You will then return a new string that 
+							is the original string concatenated with the reflection of the original string (reverse the string). It may be 
+							helpful to use a for-loop to reflect (reverse) the string. Hint: Add each letter letter to the FRONT of the new 
+							string you are building up! 
+						</dd>
+				<dl>
+				aString:&nbsp;&nbsp;<input type="text" id="mirror"/>
+				<br/>
+				<input type="button" value="Run Function" onClick="onClickFunc3()" />
+				<script>
+					function onClickFunc3()
+					{
+						var aString = document.getElementById('mirror').value;
+						
+						wordMirror(aString);
+					}
+				</script>
+			</div>
+			
+			<div id ="function4">
+				<h2> encryption</h2>
+				<dl>
+					<dt><b>Parameters</b></dt>
+						<dd>aString – a string that you want to encrypt</dd>
+					<dt><b>Return</b></dt>
+						<dd>None</dd>
+					<dt><b>Description</b></dt>
+						<dd>
+							Write a function that encrypts a message into a secret code. The encryption should reflect the 
+							following conversions:<br/>
+							1. a - @ (i.e. Change every instance of “a” to “@”)<br/>
+							2. e - ()<br/>
+							3. h - #<br/>
+							4. l - 1 (lowercase-L to number one)<br/>
+							5. r - + (plus sign)<br/>
+							6. s - $<br/>
+							7. v - ^<br/>
+							8. x - *<br/>
+						</dd>
+				<dl>
+				aString:&nbsp;&nbsp;<input type="text" id="code"/>
+				<br/>
+				<input type="button" value="Run Function" onClick="onClickFunc4()" />
+				<script>
+					function onClickFunc4()
+					{
+						var aString = document.getElementById('code').value;
+						
+						encryption(aString);
+					}
+				</script>
+			</div>
+			
+			<div id ="function5">
+				<h2> countDown</h2>
+				<dl>
+					<dt><b>Parameters</b></dt>
+						<dd>startNum – an integer that is the starting number to count down from</dd>
+						<dd>countBy– an integer that is the number you count down by</dd>
+					<dt><b>Return</b></dt>
+						<dd>None</dd>
+					<dt><b>Description</b></dt>
+						<dd>
+							Write a function to count down from the first parameter (startNum) by the second parameter
+(countBy). The function should
+print
+the numbers from the given number to 1 (decreasing by the second
+parameter each time...if you go past 1, don't print it!) in descending order, with each number being printed
+on its own line. After printing the required numbers, on a separate line, print the string 'Blast off!'						</dd>
+				<dl>
+				startNum:&nbsp;&nbsp;<input type="text" id="start"/>
+				countBy:&nbsp;&nbsp;<input type="text" id="count"/>
+				<br/>
+				<input type="button" value="Run Function" onClick="onClickFunc5()" />
+				<script>
+					function onClickFunc5()
+					{
+						var startNum = document.getElementById('start').value;
+						var countBy = document.getElementById('count').value;
+						
+						countDown(startNum, countBy);
+					}
+				</script>
+			</div>
+		<script>
+			function letterGrade(grade) {
+				if(grade<=100 && grade>=90){
+					alert("You made a(n) A");
+				} else if(grade<90 && grade>=80){
+					alert("You made a(n) B");
+				}else if(grade<80 && grade>=70){
+					alert("You made a(n) C");
+				}else if(grade<70 && grade>=60){
+					alert("You made a(n) D");
+				}else if(grade<60){
+					alert("You made a(n) F");
+				}
+			}
+			
+			function countLetter(aWord, aLetter) {
+				var aWord = aWord.toLowerCase();
+				var aLetter = aLetter.toLowerCase();
+				var counter = 0;
+				for (i=0; i < aWord.length; i++) {
+					var letter = aWord.charAt(i);
+					if (letter==aLetter) {
+						counter++;
+					}
+				}
+				alert(counter);
+			}
+			
+			function eyeForI(aString) {
+				aString.split("");
+				var new_string = "";
+				var counter = 0;
+				for (i=0; i < aString.length; i++) {
+					if (aString[i]=="I" || aString[i]=="i") {
+						new_string += "eye";
+					} else {
+						new_string += aString[i];
+					}
+				}
+				alert(new_string);
+			}
+			
+			function wordMirror(aString) {
+				var new_string = "";
+				aString.split("");
+				for(i=0; i < aString.length; i++) {
+					new_string = aString[i] + new_string;
+				}
+				alert(new_string);
+			}
+			
+			function encryption(aString) {
+				var new_string = aString.replace("a","@");
+				var new_string1 = new_string.replace("e","()");
+				var new_string2 = new_string1.replace("h","#");
+				var new_string3 = new_string2.replace("l","1");
+				var new_string4 = new_string3.replace("r","+");
+				var new_string5 = new_string4.replace("s","$");
+				var new_string6 = new_string5.replace("v","^");
+				var new_string7 = new_string6.replace("x","*");
+				//The instructions on index.html don't say to return anything however the original hw3 does, so I decided to return the result anyway
+				alert(new_string7);
+			}
+			
+			function countDown(startNum, countBy) {
+				var list = [];
+				var num = Math.floor(startNum / countBy);
+				for(i=0; i < num; i++) {
+					list[i] = startNum+"\n";
+					startNum -= countBy;
+				}
+				list[num] = "Blast Off";
+				//the instructions on index.html says to "print", I assumed this meant in an alert box
+				alert(list);
+			}
+		</script>
+	</body>
+</html>
